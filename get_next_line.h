@@ -18,16 +18,14 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1
+#  define BUFFER_SIZE 1
 # endif
 
-char		*get_next_line(int fd);
-char		*strjoin(const char *s1, const char *s2);
-char		*strdup(const char *s);
-size_t		strlen(const char *s);
-char		*substr(const char *str, size_t start, size_t length);
-static char	*strchr(const char *s, int c);
-static char	*_fill_line_buffer(int fd, char *left_c, char *buffer);
-static char	*set_line(char *line_buffer);
+char	*get_next_line(int fd);
+int		ft_check(char *s);
+void	ft_buf_cut(char *dest);
+int		ft_len(char *s, int j);
+char	*ft_join(char *s1, char *s2);
+char	*test(char *s1, char *dest);
 
 #endif
